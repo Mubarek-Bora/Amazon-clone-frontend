@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { categoryImage } from './CategoryFullinfos'
+import { categoryImage } from './CategoryFullInfos'
 import CategoryCard from './CategoryCard'
 import classes from './Category.module.css'
 
