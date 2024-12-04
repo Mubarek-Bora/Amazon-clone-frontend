@@ -1,10 +1,10 @@
 
-const { onRequest } = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+const { onRequest } = require('firebase-functions/v2/https');
+//const logger = require("firebase-functions/logger");
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const { setGlobalOptions } = require("firebase-functions");
+const { setGlobalOptions } = require('firebase-functions');
 dotenv.config();
 const stripe = require('stripe')(process.env.STRIPE_KEY);
 
@@ -67,8 +67,8 @@ setGlobalOptions ({maxInstances:10})
 
 
 // Validate Stripe API key
- if (!process.env.STRIPE_KEY) {
-   throw new Error("STRIPE_KEY is missing in the environment variables.");
+if (!process.env.STRIPE_KEY) {
+throw new Error("STRIPE_KEY is missing in the environment variables.");
 // }
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 

@@ -44,7 +44,7 @@ const Cart = () => {
                     key={i}
                     product={item}
                     renderDesc={true}
-                    renderAdd={true}
+                    renderAdd={false}
                     flex={true}
                   />
                   <div className={classes.btn_container}>

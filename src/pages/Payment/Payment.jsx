@@ -11,7 +11,7 @@ import CurrencyFormat from '../../components/CurrencyFormat/CurrencyFormat';
 import { axiosInstance } from '../../Api/axios';
 import {ClipLoader} from 'react-spinners';
 import { db } from '../../Utility/firebase';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Type } from '../../Utility/action.type';
 
 const Payment = () => {
@@ -45,7 +45,10 @@ const Payment = () => {
             const response = await axiosInstance({
               method: "POST",
               url: `/payment/create?total=${total}`,
-            });
+           });
+            // const response = await axios.post(
+            //   `https://amazon-api-deploy-1en6.onrender.com/payment/create?total=${total}`
+            // );
            // console.log(response.data);
             const clientSecret = response.data?.clientSecret;
             //2. client side (react side confirmation )
